@@ -62,9 +62,6 @@
                      
                      <span>SKILL</span>
                    </h1>  
-                   
-                   
-                   
                    <div class = "skill-display"> 
                    <div class="skill-progress">
                     <div class="eighty-five-percent mb-blue">
@@ -116,8 +113,6 @@
                         </div>
                     </div>
                 </div>
-                
-                
                 <div class="skill-progress">
                     <div class="eighty-percent mb-light">
                         <div class="skill-name">
@@ -141,10 +136,6 @@
                         </div>
                     </div>
                 </div>
-                
-                 
-                
-                
                 <div class="skill-progress">
                     <div class="eighty-percent mb-darkbrown">
                         <div class="skill-name">
@@ -159,8 +150,6 @@
                         </div>
                     </div>
                 </div>
-                
-                
                 <div class="skill-progress">
                     <div class="eighty-percent mb-pink">
                         <div class="skill-name">
@@ -168,12 +157,8 @@
                         </div>
                     </div>
                 </div>
-                
-
             </div>
-                   
              </section>
-
         <section id="experience">
               <h1 class="section-heading mb75px">
                  <span>
@@ -186,52 +171,35 @@
                         <div class="timeline-logo">
                             <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000030_1550710829_ninjasicon.png">
                         </div>
-                   
                       <h3 class = "experience-designation m0 m-blue">DS and Algos. in C++</h3>
                       <h4 class = "experience-company-name">Coding Ninjas</h4>
                       <h5 class = "experience-duration m0">Sep 2020 - May 2021</h5>
-                      
                       <p class ="experience-description text-align-justify">
                         Studied the basics of C++, got familiar with OOPS in C++, and various important searching and sorting algorithms, Recursion, Basics of Pointers, Dynamic Programming, Arrays, Time and Space Complexity, Linked Lists, Stacks, Queues, Trees, BSTs, BTs, Hashmaps, Priority Queues, Graphs, Tries and Huffman Coding. 
                       </p> 
-                      
-                     
                  </div>
-                 
                  <div class = "timeline-box">
                         <div class="timeline-logo">
                             <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000030_1550710829_ninjasicon.png">
                         </div>
-                   
                       <h3 class = "experience-designation m0 m-blue z">Full Stack Web Development With Node JS and React JS</h3>
                       <h4 class = "experience-company-name">Coding Ninjas</h4>
                       <h5 class = "experience-duration m0">may 2021 - currently</h5>
-                      
                       <p class ="experience-description text-align-justify">
                         As a part of this training program, I Studied the concepts of full stack web development, which includes Front end web development as well as back end web development. I also studied React JS, Redux in depth in this training program and found it really fascinating how React uses state as its root to manipulate most of the DOM Structure. After this course, MERN Stack Web Development became my main strength.
                       </p> 
-                 
                  </div>
-                 
                  <div class = "timeline-box">
                         <div class="timeline-logo">
                             <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000030_1550710829_ninjasicon.png">
                         </div>
-                   
                       <h3 class = "experience-designation m0 m-blue">MATLAB</h3>
                       <h4 class = "experience-company-name">Pantech Solution</h4>
                       <h5 class = "experience-duration m0">Sep 2020 - May 2021</h5>
-                      
                       <p class ="experience-description text-align-justify">
                         Studied about MATLAB programming language.Studied about MATLAB basics and functions of differnt built in function.
                       </p> 
-                 
                  </div>
-                 
-                
-                 
-                 
-                 
                  
                <div id="timeline-divider">
                     <div class="timeline-traveller">
@@ -433,7 +401,7 @@
           <div id="contact-container">
 
                 <div id="contact-form-container">
-                    <form id="contact-form">
+                    <form id="contact-form" action="javascript:sendmail()" method="post">
                         <input id="input-name" name="name" type="text" placeholder="Your Name">
                         <input id="input-email" name="input-email" type="text" required placeholder="Your Email">
                         <textarea id="input-message" name="input-message" rows="2" cols="40" placeholder="Message"></textarea>
@@ -473,6 +441,47 @@
         </section>
 
     </main>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+            <script>  
+    
+         function sendmail(){
+        
+                var name = $('#input-name').val();
+                var email = $('#input-email').val();
+
+          var message = $('#input-message').val();
+    
+
+    
+                var Body='Name: '+name+'<br>Email: '+email+'<br>Message: '+message;
+                Email.send({
+                    SecureToken:"b5d61fc5-3e37-4d10-a5cd-11b50c77a705",
+                    To: 'siddharth@iiitmanipur.ac.in',
+                    From: "siddharth23mishra@gmail.com",
+                    Subject: "New message on contact from " + name,
+                    Body: Body
+			}).then(
+                    message =>{
+                        //console.log (message);
+                        if(message=='OK'){
+                        alert('Your mail has been send. Thank you for connecting.');
+                        }
+                        else{
+                            console.error (message);
+                            alert('There is error at sending message.')
+                            
+                        }
+    
+                    }
+                );
+    
+    
+    
+            }
+    
+    
+        </script>
 
 </body>
 </html>
