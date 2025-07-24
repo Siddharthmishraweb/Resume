@@ -587,9 +587,14 @@ button:focus {
 }
 
 .timeline-logo {
-  position: absolute;
+  /* position: absolute;
   width: 50px;
+  overflow: hidden; */
+
+  position: absolute;
+  width: 65px;
   overflow: hidden;
+  top: 24px;
 }
 
 .timeline-logo > img {
@@ -606,9 +611,6 @@ button:focus {
 }
 
 /* Base Nav Style */
-
-
-
 
 .nav-menu {
   background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
@@ -632,7 +634,7 @@ button:focus {
 /* LI Styling */
 .nav-menu li {
   margin: 0 3vw;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
   position: relative;
   transition: transform 0.3s ease;
@@ -676,8 +678,6 @@ button:focus {
   filter: drop-shadow(0 0 5px cyan);
 }
 
-
-
 /* * {
     margin: 0;
     padding: 0;
@@ -691,8 +691,6 @@ body {
     min-height: 100vh;
     background: #1e2759;
 } */
-
-
 
 /* 
 ul {
@@ -792,9 +790,6 @@ ul li:nth-child(5).active~#marker::before {
         0 0 40px #ff308f,
         0 0 60px #ff308f
 } */
-
-
-
 
 /* * {
   margin: 0;
